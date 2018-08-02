@@ -1,9 +1,18 @@
-// Update with your config settings.
+'use strict';
 
 module.exports = {
+  development: {
+    client: 'pg',
+    connection: 'postgres://localhost/vaca_schedule',
+  },
 
-development: {
-    client: 'postgresql',
-    connection: 'postgres://localhost/vaca_schedule'
-    }
+  test: {
+    client: 'pg',
+    connection: 'postgres://localhost/vaca_schedule_test',
+  },
+
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL
+  }
 };
