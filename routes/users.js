@@ -24,8 +24,6 @@ router.get('/:userid', (req, res, next) => {
   .where('id', req.params.userid)
   .then((user) => {
     let newUserArr = user.map((user) => {
-      delete user.created_at;
-      delete user.updated_at;
       // console.log('user is', user)
       return user;
     })
@@ -37,8 +35,9 @@ router.get('/:userid', (req, res, next) => {
 // create NEW USER
 router.post('/', (req, res, next) => {
   // console.log('REQ.BODY', req.body);
+  let firstName = req.body.firstName;
+  let lastName = req.body.lastName;
   let email = req.body.email;
-  let username = req.body.username;
   let password = req.body.password;
 
   // check if the email already exists:
@@ -57,9 +56,9 @@ router.post('/', (req, res, next) => {
     // if it doesn't exist, create new user's record w/ email + hashed password
     knex('users')
     .insert({
-      user_type: 'customer',
+      firstName: firstName,
+      lastName: lastName,
       email: email,
-      username: username,
       password: hashed,
     })
     .returning('*')
