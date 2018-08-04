@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('eventName').notNullable();
     table.text('eventDescription').notNullable();
     table.integer('eventPrice').notNullable();
+    table.string('eventCity').notNullable();
     table.timestamps(true, true);
   })
 };
