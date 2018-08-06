@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments().primary();
     table.string('eventName').notNullable();
     table.text('eventDescription').notNullable();
+    table.text('eventImage')
     table.integer('eventPrice').notNullable();
     table.string('eventCity').notNullable();
     table.timestamps(true, true);
