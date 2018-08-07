@@ -1,12 +1,12 @@
 
-exports.up = function(knex, Promise) {
+exports.up = function (knex, Promise) {
   return knex.schema.createTable('cities', (table) => {
-    table.increments().primary();
+    table.increments().primary()
     table.string('city')
-    table.timestamps(true, true);
+    table.timestamps(true, true)
   })
-};
+}
 
-exports.down = function(knex, Promise) {
+exports.down = function (knex, Promise) {
   return knex.schema.dropTable('cities')
-};
+}
