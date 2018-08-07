@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const knex = require('../db/knex');
 const bcrypt = require('bcryptjs');
+const service = require('../auth/service');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -67,7 +68,8 @@ router.post('/', (req, res, next) => {
       console.log(result)
       let insertedRecord = result[0]
       console.log('data', insertedRecord)
-      res.send(insertedRecord)
+      const token = service.signToken(insertedRecord.id, insertedRecord.email);
+      res.send({data: insertedRecord, token})
     })
   })
   .catch((err) => {
