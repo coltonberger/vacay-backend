@@ -16,9 +16,6 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res, next) => {
   let email = req.body.email;
   let password = req.body.password;
-
-  // take in username, email and password
-  // find user in the DB
   knex('users')
   .where('email', email)
   .first()
