@@ -17,4 +17,18 @@ router.get('/', function (req, res, next) {
     })
 })
 
+// get ONE schedule
+router.get('/:scheduleid', (req, res, next) => {
+  knex('schedules')
+    .where('id', req.params.scheduleid)
+    .then((schedule) => {
+      let newscheduleArr = schedule.map((schedule) => {
+      // console.log('schedule is', schedule)
+        return schedule
+      })
+      console.log('the specific schedule', newscheduleArr)
+      res.send(newscheduleArr)
+    })
+})
+
 module.exports = router
