@@ -31,4 +31,39 @@ router.get('/:scheduleid', (req, res, next) => {
     })
 })
 
+//create one schedule <<<OK>>>
+router.post('/', (req, res, next) => {
+  console.log('REQ.BODY', req.body);
+  knex('schedules')
+  .insert({eventName: req.body.eventName})
+  .returning('*')
+  .then((result) => {
+    console.log(result)
+    let insertedRecord = result[0]
+    console.log('data', insertedRecord)
+    res.send(insertedRecord)
+  })
+})
+
+
+// DELETE a specific schedule <<<OK>>>
+router.delete('/:schedulesid', (req, res, next) => {
+  // lookup a scheduleid in the DB, if exists, delete it
+  knex('schedules')
+  .where('id', req.params.userid)
+  .del()
+  .then((result) => {
+    console.log('result', result)
+    if( result ) {
+      res.send({ 'success': result })
+    } else {
+      throw new Error('Couldnt find the user to delete')
+    }
+  })
+  .catch((err) => {
+    next(err)
+  })
+})
+
+
 module.exports = router
