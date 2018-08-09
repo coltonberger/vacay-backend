@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
 var loginRouter = require('./routes/login')
 var schedulesRouter = require('./routes/schedules')
+var savedEventsRouter = require('./routes/savedEvents')
 var events = require('./routes/events')
 
 var app = express()
@@ -29,6 +30,7 @@ app.use('/events', events)
 app.use('/users', usersRouter)
 app.use('/login', loginRouter)
 app.use('/schedules', schedulesRouter)
+app.use('/savedEvents', savedEventsRouter)
 //app.use('/schedules', scheduleRouter)
 
 // catch 404 and forward to error handler

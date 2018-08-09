@@ -2,14 +2,14 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../db/knex')
 
-/* GET schedules listing. */
+/* GET savedEvent listing. */
 router.get('/', function (req, res, next) {
-  knex('schedules')
-    .then((schedules) => {
-      let newSchedulesArr = schedules.map((schedule) => {
-        return schedule
+  knex('savedEvents')
+    .then((savedEvents) => {
+      let newSavedEventsArr = savedEvents.map((savedEvent) => {
+        return savedEvent
       })
-      res.status(200).send(newSchedulesArr) // 200 = ok
+      res.status(200).send(newSavedEventsArr) // 200 = ok
     })
     .catch((err) => {
       console.log('err', err)
@@ -18,16 +18,16 @@ router.get('/', function (req, res, next) {
 })
 
 // get ONE schedule
-router.get('/:scheduleid', (req, res, next) => {
-  knex('schedules')
-    .where('id', req.params.scheduleid)
-    .then((schedule) => {
-      let newscheduleArr = schedule.map((schedule) => {
+router.get('/:savedEventsid', (req, res, next) => {
+  knex('savedEvents')
+    .where('id', req.params.savedEventsid)
+    .then((savedEvents) => {
+      let newSavedEventsArr = savedEvents.map((savedEvent) => {
       // console.log('schedule is', schedule)
-        return schedule
+        return savedEvent
       })
-      console.log('the specific schedule', newscheduleArr)
-      res.send(newscheduleArr)
+      console.log('the specific schedule', newSavedEventsArr)
+      res.send(newSavedEventsArr)
     })
 })
 
@@ -35,32 +35,17 @@ router.get('/:scheduleid', (req, res, next) => {
 router.post('/', (req, res, next) => {
   console.log('REQ.BODY', req.body);
   knex('schedules')
-  .insert({
-    users_id: req.body.userId
-  })
+  .insert(
+    {userId: req.body.schedules_id},
+    {eventId: req.body.events_id}
+  )
   .returning('*')
-  .then(results => {
-    console.log('schedules results', results);
-    return req.body.events.map(event => {
-      return knex('savedEvents')
-      .insert({
-        schedules_id: results[0].id,
-        events_id: event.id
-      })
-      .returning('*')
-      .then(response => {
-        console.log('savedEvents resp', response);
-        return response;
-      })
-    })
-  })
   .then((result) => {
     console.log(result)
     let insertedRecord = result[0]
     console.log('data', insertedRecord)
     res.send(insertedRecord)
   })
-  .catch(err => console.log(err))
 })
 
 
@@ -83,7 +68,7 @@ router.post('/', (req, res, next) => {
 //   })
 // })
 
-// DELETE one schedule
+//DELETE one schedule
 router.delete('/:id', function(req, res, next) {
   const scheduleId = req.params.id;
   console.log(scheduleId)
