@@ -7,7 +7,7 @@ exports.up = function (knex, Promise) {
     table.text('eventImage')
     table.text('eventWebsite')
     table.integer('eventPrice').notNullable()
-    table.string('eventCity').references('cities.id').onDelete('CASCADE')
+    table.integer('eventCity').references('locations.id')
     table.timestamps(true, true)
   })
 }
