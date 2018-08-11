@@ -2,6 +2,61 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../db/knex')
 
+router.get('/:usersid', (req, res, next) => {
+  eventsRequest(req)
+    .then(data => res.json(data));
+})
+
+const eventsRequest = async (req) => {
+  console.log('req.params', req.params);
+  const schedules = await knex
+    .select('id')
+    .from('schedules')
+    .where('users_id', req.params.usersid);
+
+  console.log('schedules', schedules);
+  const finalEvents = await schedules.map(async (schedule) => {
+      let acc = []
+      try {
+        const events = await knex
+          .select('events.id','events.eventName', 'events.eventCity', 'events.eventDescription' )
+          .from('events')
+          .innerJoin('savedEvents', 'events_id','events.id')
+          .where('savedEvents.schedules_id', schedule.id);
+        console.log('events', events);
+        return events;
+      } catch (error) {
+        console.log('error', error);
+      }
+  });
+  console.log('final events', finalEvents);
+  //return finalEvents;
+  try {
+    const eventList = await Promise.all(finalEvents).then(items => {
+      console.log('items', items);
+      return items;
+    });
+    console.log('final eventList', eventList);
+    return [].concat.apply([], eventList);
+  } catch (e) {
+    console.log('final events error: ', e)
+  } finally {
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* GET schedules listing. */
 router.get('/', function (req, res, next) {
   knex('schedules')

@@ -3,24 +3,28 @@ const router = express.Router()
 const knex = require('../db/knex')
 
 /* GET savedEvent listing. */
-router.get('/', function (req, res, next) {
-  knex
-  .select('events.id','events.eventName', 'events.eventCity', 'events.eventDescription' )
-  .from('events')
-  .innerJoin('savedEvents', 'events_id','events.id')
-  .where('events.id' !== null)
-  .then(data => res.json(data));
+// router.get('/:userid', function (req, res, next) {
+//   knex
+//   .select('events.id','events.eventName', 'events.eventCity', 'events.eventDescription' )
+//   .from('events')
+//   .innerJoin('savedEvents', 'events_id','events.id')
+//   .innerJoin('savedEvents', 'schedules_id', 'schedules.id')
+//   .innerJoin('schedule', 'users_id', 'users.id')
+//   .where('users.id', req.params.usersid)
+//
+//   .then(data => res.json(data));
+// })
 
 
-  // knex('savedEvents')
-  //   .then((savedEvents) => {
-  //     res.status(200).send(savedEvents) // 200 = ok
-  //   })
-  //   .catch((err) => {
-  //     console.log('err', err)
-  //     res.status(500).send({error: {message: 'Something went wrong!'}})
-  //   })
-})
+
+// router.get('/', function (req, res, next) {
+//   knex
+//   .select('users.id')
+//   .from('users')
+//   .innerJoin('savedEvents')
+//   // .where('events.id' !== null)
+//   .then(data => res.json(data));
+// })
 
 
 

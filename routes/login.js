@@ -30,7 +30,7 @@ router.post('/', (req, res, next) => {
         // create token
           let token = service.signToken(user.id, user.email)
           console.log('token', token)
-          res.status(200).send({token})
+          res.status(200).send({token, data:user})
         } else {
         // throw new Error('Wrong password');
           res.status(404).send({error: {message: 'Wrong password'}})
