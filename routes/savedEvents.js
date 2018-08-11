@@ -5,7 +5,7 @@ const knex = require('../db/knex')
 /* GET savedEvent listing. */
 router.get('/', function (req, res, next) {
   knex
-  .select('events.id','events.eventName')
+  .select('events.id','events.eventName', 'events.eventCity', 'events.eventDescription' )
   .from('events')
   .innerJoin('savedEvents', 'events_id','events.id')
   .where('events.id' !== null)
