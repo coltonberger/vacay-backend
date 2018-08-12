@@ -17,11 +17,16 @@ const eventsRequest = async (req) => {
   const finalEvents = await schedules.map(async (schedule) => {
       let acc = []
       try {
-        const events = await knex
-          .select('events.id','events.eventName', 'events.eventCity', 'events.eventDescription' )
+        let events = await knex
+          .select('events.id','events.eventName', 'events.eventCity', 'events.eventDescription')
           .from('events')
           .innerJoin('savedEvents', 'events_id','events.id')
           .where('savedEvents.schedules_id', schedule.id);
+
+        events = events.map(event => {
+          event['schedule_id'] = schedule.id
+          return event;
+        })
         //console.log('events', events);
         return events;
       } catch (error) {
@@ -42,17 +47,6 @@ const eventsRequest = async (req) => {
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* GET schedules listing. */

@@ -35,17 +35,17 @@ router.get('/:savedEventsid', function (req, res, next) {
 
 
 //DELETE a specific schedule <<<OK>>>
-router.delete('/:savedEventsid', (req, res, next) => {
+router.delete('/:savedEventsid/:scheduleid', (req, res, next) => {
   // lookup a scheduleid in the DB, if exists, delete it
   knex('savedEvents')
-  .where('id', req.params.savedEventsid)
+  .where({'events_id': req.params.savedEventsid, 'schedules_id': req.params.scheduleid, })
   .del()
   .then((result) => {
     console.log('result', result)
     if( result ) {
       res.send({ 'success': result })
     } else {
-      throw new Error('Couldnt find the user to delete')
+      throw new Error('Couldnt find the event to delete')
     }
   })
   .catch((err) => {
