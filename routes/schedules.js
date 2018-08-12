@@ -8,13 +8,12 @@ router.get('/:usersid', (req, res, next) => {
 })
 
 const eventsRequest = async (req) => {
-  console.log('req.params', req.params);
+  //console.log('req.params', req.params);
   const schedules = await knex
     .select('id')
     .from('schedules')
     .where('users_id', req.params.usersid);
-
-  console.log('schedules', schedules);
+  //console.log('schedules', schedules);
   const finalEvents = await schedules.map(async (schedule) => {
       let acc = []
       try {
@@ -23,23 +22,22 @@ const eventsRequest = async (req) => {
           .from('events')
           .innerJoin('savedEvents', 'events_id','events.id')
           .where('savedEvents.schedules_id', schedule.id);
-        console.log('events', events);
+        //console.log('events', events);
         return events;
       } catch (error) {
-        console.log('error', error);
+        //console.log('error', error);
       }
   });
-  console.log('final events', finalEvents);
-  //return finalEvents;
+  //console.log('final events', finalEvents);
   try {
     const eventList = await Promise.all(finalEvents).then(items => {
-      console.log('items', items);
+      //console.log('items', items);
       return items;
     });
-    console.log('final eventList', eventList);
+    //console.log('final eventList', eventList);
     return [].concat.apply([], eventList);
   } catch (e) {
-    console.log('final events error: ', e)
+    //console.log('final events error: ', e)
   } finally {
 
   }

@@ -2,76 +2,55 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../db/knex')
 
-/* GET savedEvent listing. */
-// router.get('/:userid', function (req, res, next) {
-//   knex
-//   .select('events.id','events.eventName', 'events.eventCity', 'events.eventDescription' )
-//   .from('events')
-//   .innerJoin('savedEvents', 'events_id','events.id')
-//   .innerJoin('savedEvents', 'schedules_id', 'schedules.id')
-//   .innerJoin('schedule', 'users_id', 'users.id')
-//   .where('users.id', req.params.usersid)
-//
-//   .then(data => res.json(data));
-// })
+//Get all
+router.get('/', function (req, res, next) {
+  knex('savedEvents')
+    .then((savedEvents) => {
+      let newSavedEventsArr = savedEvents.map((savedEvent) => {
+        return savedEvent
+      })
+      res.status(200).send(newSavedEventsArr) // 200 = ok
+    })
+    .catch((err) => {
+      console.log('err', err)
+      res.status(500).send({error: {message: 'Something went wrong!'}})
+    })
+})
+
+//get one
+router.get('/:savedEventsid', function (req, res, next) {
+  knex('savedEvents')
+    .where('id', req.params.savedEventsid)
+    .then((savedEvent) => {
+      let newSavedEventArr = savedEvent.map((savedEvent) => {
+        return savedEvent
+      })
+      res.status(200).send(newSavedEventArr)
+    })
+    .catch((err) => {
+      console.log('err', err)
+      res.status(500).send({error: {message: 'Something went wrong!'}})
+    })
+})
 
 
-
-// router.get('/', function (req, res, next) {
-//   knex
-//   .select('users.id')
-//   .from('users')
-//   .innerJoin('savedEvents')
-//   // .where('events.id' !== null)
-//   .then(data => res.json(data));
-// })
-
-
-
-// DELETE a specific schedule <<<OK>>>
-// router.delete('/:id', (req, res, next) => {
-//   // lookup a scheduleid in the DB, if exists, delete it
-//   knex('schedules')
-//   .where('id', req.params.userid)
-//   .del()
-//   .then((result) => {
-//     console.log('result', result)
-//     if( result ) {
-//       res.send({ 'success': result })
-//     } else {
-//       throw new Error('Couldnt find the user to delete')
-//     }
-//   })
-//   .catch((err) => {
-//     next(err)
-//   })
-// })
-
-//DELETE one schedule
-// router.delete('/:id', function(req, res, next) {
-//   const scheduleId = req.params.id;
-//   console.log(scheduleId)
-//
-//   knex('schedules')
-//     .where('id', scheduleId)
-//     .then((row) => {
-//       if(!row) return next()
-//       knex('schedules')
-//         .del()
-//         .where('id', scheduleId)
-//         .then(() => {
-//           res.send(`ID ${scheduleId} Deleted`)
-//         })
-//         .catch((err) => {
-//           console.log("Hey, could not delete!")
-//           next(err)
-//         })
-//     })
-//     .catch((err) => {
-//       next(err)
-//     })
-// })
-
-
+//DELETE a specific schedule <<<OK>>>
+router.delete('/:savedEventsid', (req, res, next) => {
+  // lookup a scheduleid in the DB, if exists, delete it
+  knex('savedEvents')
+  .where('id', req.params.savedEventsid)
+  .del()
+  .then((result) => {
+    console.log('result', result)
+    if( result ) {
+      res.send({ 'success': result })
+    } else {
+      throw new Error('Couldnt find the user to delete')
+    }
+  })
+  .catch((err) => {
+    next(err)
+  })
+})
 
 module.exports = router
