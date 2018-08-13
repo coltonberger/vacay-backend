@@ -110,26 +110,6 @@ router.post('/', (req, res, next) => {
   .catch(err => console.log(err))
 })
 
-
-// DELETE a specific schedule <<<OK>>>
-// router.delete('/:id', (req, res, next) => {
-//   // lookup a scheduleid in the DB, if exists, delete it
-//   knex('schedules')
-//   .where('id', req.params.userid)
-//   .del()
-//   .then((result) => {
-//     console.log('result', result)
-//     if( result ) {
-//       res.send({ 'success': result })
-//     } else {
-//       throw new Error('Couldnt find the user to delete')
-//     }
-//   })
-//   .catch((err) => {
-//     next(err)
-//   })
-// })
-
 // DELETE one schedule
 router.delete('/:id', function(req, res, next) {
   const scheduleId = req.params.id;
