@@ -29,7 +29,7 @@ Project planning:[Trello](https://trello.com/b/6JR8BIc0/q3)
 - [ ] Have full test coverage.
 - [x] Follow RESTful patterns.
 - [ ] Use an opinionated architecture (e.g. MVC).
-- [ ] Include error handling.
+- [x] Include error handling.
 - [x] Store data in a database.
 - [x] Save a separate project directory and GitHub repository for your back-end project.
 - [x] Submit an Entity Relationship Diagram for your relational database schema.
@@ -37,5 +37,5 @@ Project planning:[Trello](https://trello.com/b/6JR8BIc0/q3)
 - [x] Your relational database schema MUST implement these relationships using foreign key constraints.
 - [x] Your relational database schema MUST be appropriately normalized.
 - [ ] Deploy your server.
-- [ ] Have a User entity.
-- [ ] Your API MUST support user authentication (a.k.a., "login" / "sign-in").
+- [x] Have a User entity.
+- [x] Your API MUST support user authentication (a.k.a., "login" / "sign-in").
