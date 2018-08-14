@@ -12,7 +12,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.sfmoma.org/',
           eventDescription: 'The San Francisco Museum of Modern Art is a modern art museum located in San Francisco, California. A nonprofit organization, SFMOMA holds an internationally recognized collection of modern and contemporary',
           eventPrice: 25,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 2,
           eventName: 'Cal Academy',
@@ -20,7 +20,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.calacademy.org/',
           eventDescription: 'The California Academy of Sciences is a research institute and natural history museum in San Francisco, California, that is among the largest museums of natural history in the world, housing over 26 million specimens.',
           eventPrice: 40,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 3,
           eventName: 'Cars and Coffee',
@@ -28,7 +28,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.eventbrite.com/e/cars-and-coffee-la-tickets-34210770335',
           eventDescription: 'PLEASE JOIN US FOR A LITTLE COFFEE AND A LOT OF AMAZING AUTOMOBILES.',
           eventPrice: 5,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 4,
           eventName: 'Alamo Square',
@@ -36,7 +36,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://sfrecpark.org/destination/alamo-square/',
           eventDescription: 'Alamo Square is a residential neighborhood and park in San Francisco, California, in the Western Addition',
           eventPrice: 0,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 5,
           eventName: 'Marin Headlands',
@@ -44,7 +44,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.nps.gov/goga/marin-headlands.htm',
           eventDescription: 'The Marin Headlands houses an amazing richness of history and biological diversity due to the variety of habitats and unique geology',
           eventPrice: 10,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 6,
           eventName: 'Brooklyn Bridge',
@@ -52,7 +52,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.brooklynbridgepark.org/',
           eventDescription: 'The Brooklyn Bridge is a hybrid cable-stayed/suspension bridge in New York City and is one of the oldest roadway bridges in the United States.',
           eventPrice: 0,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 7,
           eventName: 'Conservatory of Flowers',
@@ -60,7 +60,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://conservatoryofflowers.org/',
           eventDescription: 'Golden Gate Parks Victorian-era glass greenhouse has more than 2,000 species of plants & flowers.',
           eventPrice: 9,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 8,
           eventName: 'Malibu Wine Safari',
@@ -68,7 +68,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.lasafaris.com/',
           eventDescription: 'Explore the 1,000 acre Saddlerock Ranch and vineyard in Malibu. Your trusty guide and driver team will lead the adventure on custom-built open-air Safari vehicles. ',
           eventPrice: 95,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 9,
           eventName: 'Mr. Holmes Bake House',
@@ -76,7 +76,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://mrholmesbakehouse.com/',
           eventDescription: 'Bakery serving a mix of tarts, donuts & croissant-muffins, plus coffee in a cozy, bright space.',
           eventPrice: 6,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 10,
           eventName: 'Brooklyn Barge',
@@ -84,7 +84,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.thebrooklynbarge.com/',
           eventDescription: 'Hip waterfront gastropub featuring American plates & cocktails, plus a patio with skyline views.',
           eventPrice: 75,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 11,
           eventName: 'Huntington Tea Garden',
@@ -92,7 +92,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://huntington.org/',
           eventDescription: 'The Huntington Library, Art Collections and Botanical Gardens is a collections-based educational and research institution established by Henry E. Huntington and located in Los Angeles County in San Marino, California',
           eventPrice: 27,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 12,
           eventName: 'Museum of Ice Cream',
@@ -100,7 +100,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.museumoficecream.com/san-francisco/',
           eventDescription: 'A WILD IMAGINATION, CHASING YOUR DREAMS, HAVING FUN, TOGETHERNESS, SHARING SWEETS & TREATING YOUR TASTEBUDS',
           eventPrice: 38,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 13,
           eventName: 'vida verde nyc',
@@ -108,7 +108,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://vidaverdeny.com/',
           eventDescription: 'eat at a trendy restaurant',
           eventPrice: 75,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 14,
           eventName: 'Natural Pools',
@@ -116,7 +116,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.theoutbound.com/orange-county/swimming/a-day-at-the-thousand-steps-pools',
           eventDescription: 'A beautiful, sometimes secluded beach with two man made pools that collect saltwater during high tide and warm up during low tide. Unbelievable sunset views.',
           eventPrice: 0,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 15,
           eventName: 'Moraga Tiled Steps',
@@ -124,7 +124,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://www.16thavenuetiledsteps.com/',
           eventDescription: 'Creative, community-driven mosaic featuring a flowing sea to stars design up a 163-step stairway.',
           eventPrice: 0,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 16,
           eventName: 'Soho Grand Hotel',
@@ -132,7 +132,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.sohogrand.com/',
           eventDescription: 'drink at a trendy hotel',
           eventPrice: 25,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 17,
           eventName: 'LACMA',
@@ -140,7 +140,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://www.lacma.org/',
           eventDescription: 'Largest art museum in the West inspires creativity and dialogue.',
           eventPrice: 20,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 18,
           eventName: 'Foreign Cinmea',
@@ -148,7 +148,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://foreigncinema.com/',
           eventDescription: 'Crowds eat Californian-Mediterranean fare (& a popular brunch) in an outdoor space screening films.',
           eventPrice: 40,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 19,
           eventName: 'Govern Island Camping',
@@ -156,7 +156,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.collectiveretreats.com/retreat/collective-governors-island/',
           eventDescription: 'A quick ferry ride from downtown Manhattan, this peaceful oasis is nestled near the hills of historic Governors Island. You’ll be surrounded by sprawling green space with unparalleled views of the Statue of Liberty across the New York Harbor. It’s a retreat unlike any other in the world.',
           eventPrice: 100,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 20,
           eventName: 'Venice Beach',
@@ -164,7 +164,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.venicebeach.com/',
           eventDescription: 'Known for its bohemian spirit, Venice is a buzzing beach town with upscale commercial and residential pockets. Free-spirited Venice Boardwalk is the site of funky shops, street performers and colorful murals.',
           eventPrice: 0,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 21,
           eventName: 'Castro',
@@ -172,7 +172,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.sfgate.com/neighborhoods/sf/castro/',
           eventDescription: 'The Castro District, in Eureka Valley, is synonymous with gay culture. Revelers often spill onto the sidewalks at numerous bars, like Twin Peaks Tavern, whose floor-to-ceiling windows were revolutionary when it opened in 1972. ',
           eventPrice: 0,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 22,
           eventName: 'AIRE Ancient Baths',
@@ -180,7 +180,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://beaire.com/en/aire-ancient-baths-new-york/',
           eventDescription: 'In the midst of the bustle and fast-paced rhythm of downtown, right at the heart of TriBeCa, there is an oasis of tranquility exclusively designed to balance mind and body. Located at a restored historical building, originally an 1883 textile factory, the AIRE experience consists of an unforgettable journey through sensations across the various baths with water at different temperatures that will transport you to the ancient times of the Roman, Greek and Ottoman traditions.',
           eventPrice: 75,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 23,
           eventName: 'Malibu Farm',
@@ -188,7 +188,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.malibu-farm.com/',
           eventDescription: 'Breakfast-&-lunch spot offering locally sourced American cuisine & pierside Pacific views.',
           eventPrice: 30,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 24,
           eventName: 'Tea at the Palace Hotel',
@@ -196,7 +196,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.sfpalace.com/signature-tea-san-francisco/',
           eventDescription: 'Experience the elegance and tradition of Signature Tea in San Francisco at the historic Palace Hotel. Enjoy signature tea in our Garden Court, one of the most beautiful settings for dining and holiday events in San Francisco. ',
           eventPrice: 55,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 25,
           eventName: 'Whitney Museum',
@@ -204,7 +204,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://whitney.org/',
           eventDescription: 'The Whitney Museum of American Art. Explore works, exhibitions, and events online. Located in New York City.',
           eventPrice: 30,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 26,
           eventName: 'Grand Central Market',
@@ -212,7 +212,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://www.grandcentralmarket.com/',
           eventDescription: 'Emporium hosting food vendors & florists, plus game nights, movies & other events, since 1917.',
           eventPrice: 0,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 27,
           eventName: 'Alcatraz',
@@ -220,7 +220,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.alcatrazcruises.com/',
           eventDescription: 'Experience the beauty, history and infamy of Alcatraz Island on San Francisco Bay. You will be astounded by what you see and learn.',
           eventPrice: 37,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 28,
           eventName: 'Bike SF',
@@ -228,7 +228,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.blazingsaddles.com/san-francisco',
           eventDescription: 'Bike the Bridge! Our most popular route takes you along San Francisco’s stunning waterfront, across the Golden Gate Bridge and down to the picturesque seaside towns of Sausalito & Tiburon. Return via ferry!',
           eventPrice: 45,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 29,
           eventName: 'Pier 39 Aquarium',
@@ -236,7 +236,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.pier39.com/merchant/aquarium-of-the-bay/',
           eventDescription: 'Explore the magic, beauty and wonder of San Francisco Bay at Aquarium of the Bay. Located at the water’s edge, 20,000 local sea creatures await you.',
           eventPrice: 15,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 30,
           eventName: 'Statue of Liberty',
@@ -244,7 +244,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.statueoflibertytickets.com/tickets/',
           eventDescription: 'Iconic National Monument opened in 1886, offering guided tours, a museum & city views.',
           eventPrice: 14,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id:31,
           eventName: 'Empire State Building',
@@ -252,7 +252,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://www.esbnyc.com/',
           eventDescription: 'Iconic, art deco office tower from 1931 with exhibits & observatories on the 86th & 102nd floors.',
           eventPrice: 30,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 32,
           eventName: 'Museum of Modern Art',
@@ -260,7 +260,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.moma.org/tickets/select',
           eventDescription: 'Works from van Gogh to Warhol & beyond plus a sculpture garden, 2 cafes & The Modern restaurant.',
           eventPrice: 45,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 33,
           eventName: 'Hike to the Hollywood Sign',
@@ -268,7 +268,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://hollywoodsign.org/',
           eventDescription: "It's more than just nine white letters spelling out a city's name; it's one of the world's most evocative symbols – a universal metaphor for ambition, success, glamour...for this dazzling place, industry and dream we call H-O-L-L-Y-W-O-O-D",
           eventPrice: 0,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 34,
           eventName: 'Griffith Observatory',
@@ -276,7 +276,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://griffithobservatory.org/visiting/admission.html',
           eventDescription: 'The vista from this hilltop landmark is stunning, particularly at night when Los Angeles twinkles below. Inside you’ll find a bevy of exhibits, including a Foucault pendulum, Tesla coil and planetarium show',
           eventPrice: 30,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 35,
           eventName: 'Santa Monica Pier',
@@ -284,7 +284,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://santamonicapier.org/',
           eventDescription: 'Considered the focal point of Santa Monica Beach, Santa Monica Pier includes a Ferris wheel, aquarium, fairground games and cotton candy stands.',
           eventPrice: 0,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 36,
           eventName: 'Woodworking Class',
@@ -292,7 +292,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://coursehorse.com/nyc/classes/art/woodworking',
           eventDescription: 'Find and compare thousands of woodworking classes in NYC, New York. ... little to no woodworking experience, this five-session class covers wood physics, shop safety and etiquette, ... The key premise is learning through making and testing.',
           eventPrice: 155,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 37,
           eventName: 'Cocktail Making Class',
@@ -300,7 +300,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.eventbrite.com/d/ny--new-york/cocktail-class/?page=1',
           eventDescription: 'Come make creative cocktails and socialize.',
           eventPrice: 55,
-          eventCity: 2
+          eventCity: "New York City"
         }, {
           id: 38,
           eventName: 'Comedy Night',
@@ -308,7 +308,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.google.com/',
           eventDescription: 'Catch your favorite standup comedians in action at the Laugh Factory Club in Hollywood. Find details for all the upcoming shows, comedians and tickets',
           eventPrice: 42,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }, {
           id: 39,
           eventName: 'Dim Sum',
@@ -316,7 +316,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.google.com/',
           eventDescription: 'Restaurants specializes in traditional and contemporary Dim Sum and is located in the heart of San Francisco',
           eventPrice: 35,
-          eventCity: 1
+          eventCity: "San Francisco"
         }, {
           id: 40,
           eventName: 'architecture tour',
@@ -324,7 +324,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'https://www.google.com/',
           eventDescription: ' Los Angeles is a beacon for modern architecture and an ideal place to explore the work of innovative 20th-century home architects.',
           eventPrice: 40,
-          eventCity: 3
+          eventCity: "Los Angeles"
         }
       ]);
     });

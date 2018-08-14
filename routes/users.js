@@ -70,9 +70,9 @@ router.post('/', (req, res, next) => {
         .returning('*')
         .then((result) => {
           // console.log("success")
-          console.log(result)
+          //console.log(result)
           let insertedRecord = result[0]
-          console.log('data', insertedRecord)
+          //console.log('data', insertedRecord)
           const token = service.signToken(insertedRecord.id, insertedRecord.email)
           res.send({data: insertedRecord, token})
         })
