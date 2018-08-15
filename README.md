@@ -1,11 +1,11 @@
-# vacay-backend (new Name)
+# vā kā -backend
 Back-end: Express, Node.js, Knex.js, JavaScript, PostgreSQL, Bcrypt, JWT;<br>
 Testing: React Shallow Tests<br>
 Deployment: Heroku <br>
 
 Q3 Project - Full stack React app
 
-## Deployed URL:
+## Deployed URL: https://vaca-backend.herokuapp.com/
 
 ## What are you looking at?
 Vacay is your solution to easily browse and save events in major cities.
