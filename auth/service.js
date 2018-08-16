@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 
-const secrete = '812937einsdkflkajd'
+const secrete = process.env.JWT_SIGNING_SECRET
 
 const signToken = (id, email) => {
   return jwt.sign({ _id: id, email }, secrete, { expiresIn: 60 * 60 * 5 })

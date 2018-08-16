@@ -5,8 +5,6 @@ const bcrypt = require('bcryptjs')
 const knex = require('../db/knex')
 const service = require('../auth/service')
 
-require('dotenv').config()
-
 /* GET login page. */
 router.get('/', (req, res, next) => {
   res.render('login')

@@ -13,6 +13,7 @@ var savedEventsRouter = require('./routes/savedEvents')
 var events = require('./routes/events')
 
 var app = express()
+require('dotenv').config()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
