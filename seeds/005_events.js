@@ -276,7 +276,7 @@ exports.seed = function(knex, Promise) {
           eventWebsite: 'http://griffithobservatory.org/visiting/admission.html',
           eventDescription: 'The vista from this hilltop landmark is stunning, particularly at night when Los Angeles twinkles below. Inside you’ll find a bevy of exhibits, including a Foucault pendulum, Tesla coil and planetarium show',
           eventPrice: 30,
-          eventCity: "San Francisco"
+          eventCity: "Los Angeles"
         }, {
           id: 35,
           eventName: 'Santa Monica Pier',
