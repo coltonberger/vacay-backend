@@ -36,6 +36,6 @@ Project planning:[Trello](https://trello.com/b/6JR8BIc0/q3)
 - [x] Have at least one One-to-Many relationship and one Many-to-Many relationship between entities in your model.
 - [x] Your relational database schema MUST implement these relationships using foreign key constraints.
 - [x] Your relational database schema MUST be appropriately normalized.
-- [ ] Deploy your server.
+- [x] Deploy your server.
 - [x] Have a User entity.
 - [x] Your API MUST support user authentication (a.k.a., "login" / "sign-in").
