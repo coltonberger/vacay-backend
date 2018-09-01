@@ -4,7 +4,8 @@ const knex = require('../db/knex')
 const service = require('../auth/service')
 
 /* GET events page. */
-router.get('/', service.verifyToken, function (req, res, next) {
+//router.get('/', service.verifyToken, function (req, res, next) {
+router.get('/', function (req, res, next) {
   console.log('req.headers.authorization', req.headers.authorization);
   knex('events')
     .then((events) => {
