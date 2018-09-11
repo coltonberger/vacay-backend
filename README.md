@@ -8,7 +8,7 @@ Q3 Project - Full stack React app
 ## Deployed URL: https://vaca-backend.herokuapp.com/
 
 ## What are you looking at?
-Vacay is your solution to easily browse and save events in major cities.
+vā kā is your solution to easily browse and save events in major cities.
 
 ## Installation
 1. npm install
